@@ -1,8 +1,8 @@
 seq = input("Введи последовательность: ")
 
-
-l = list(seq)
-del l[1::2]
+lst = list(seq)
+del lst[1::2]
+l = [int(x) for x in lst]
 
 for i in range(len(l)):  # проходим по всему массиву
     idx_min = i  # сохраняем индекс предположительно минимального элемента
@@ -29,7 +29,7 @@ while True:
     try:
 
         any_n = True
-        any_n = input("Введи число: ")
+        any_n = int(input("Введи число: "))
         break
     except ValueError:
         print('Неверное значение')
